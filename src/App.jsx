@@ -192,6 +192,21 @@ function App() {
         <h2 className="section-title">Resultados</h2>
         <div className="results">
           <div className="result-item">
+            <span className="result-label">V<sub>b</sub></span>
+            <span className="result-value">{fmt(V2)}</span>
+            <span className="result-unit">V</span>
+          </div>
+          <div className="result-item">
+            <span className="result-label">V<sub>e</sub></span>
+            <span className="result-value">{fmt(Ve)}</span>
+            <span className="result-unit">V</span>
+          </div>
+          <div className="result-item">
+            <span className="result-label">V<sub>c</sub></span>
+            <span className="result-value">{fmt(Vc)}</span>
+            <span className="result-unit">V</span>
+          </div>
+          <div className="result-item">
             <span className="result-label">Vce</span>
             <span className="result-value">{fmt(Vce)}</span>
             <span className="result-unit">V</span>
