@@ -69,19 +69,19 @@ function LoadLine({ Vcc, Vce, Ic, Icsat }) {
     <svg viewBox={`0 0 ${W} ${H}`} className="loadline-svg" xmlns="http://www.w3.org/2000/svg" fontFamily="system-ui, sans-serif" fontSize="10">
       <rect x="0" y="0" width={W} height={H} fill="transparent" />
 
-      <line x1={PL} y1={PT} x2={PL} y2={PT + PH} stroke="#333" strokeWidth="1.5" />
-      <line x1={PL} y1={PT + PH} x2={PL + PW} y2={PT + PH} stroke="#333" strokeWidth="1.5" />
+      <line x1={PL} y1={PT} x2={PL} y2={PT + PH} stroke="#999" strokeWidth="1.5" />
+      <line x1={PL} y1={PT + PH} x2={PL + PW} y2={PT + PH} stroke="#999" strokeWidth="1.5" />
 
-      <text x={PL + PW / 2} y={PT + PH + 52} textAnchor="middle" fill="#333" fontSize="12" fontWeight="bold">Vce (V)</text>
-      <text x={PL} y={PT - 10} textAnchor="middle" fill="#333" fontSize="12" fontWeight="bold">Ic (mA)</text>
+      <text x={PL + PW / 2} y={PT + PH + 52} textAnchor="middle" fill="#999" fontSize="12" fontWeight="bold">Vce (V)</text>
+      <text x={PL} y={PT - 10} textAnchor="middle" fill="#999" fontSize="12" fontWeight="bold">Ic (mA)</text>
 
       {Array.from({ length: xTicks + 1 }, (_, i) => {
         const v = (i / xTicks) * Vcc
         const x = sx(v)
         return (
           <g key={`xt-${i}`}>
-            <line x1={x} y1={PT + PH} x2={x} y2={PT + PH + 5} stroke="#333" strokeWidth="1" />
-            <text x={x} y={PT + PH + 14} textAnchor="middle" fill="#555">{v.toFixed(1)}</text>
+            <line x1={x} y1={PT + PH} x2={x} y2={PT + PH + 5} stroke="#999" strokeWidth="1" />
+            <text x={x} y={PT + PH + 14} textAnchor="middle" fill="#aaa">{v.toFixed(1)}</text>
           </g>
         )
       })}
@@ -91,8 +91,8 @@ function LoadLine({ Vcc, Vce, Ic, Icsat }) {
         const y = sy(v)
         return (
           <g key={`yt-${i}`}>
-            <line x1={PL - 5} y1={y} x2={PL} y2={y} stroke="#333" strokeWidth="1" />
-            <text x={PL - 8} y={y + 3} textAnchor="end" fill="#555">{v.toFixed(2)}</text>
+            <line x1={PL - 5} y1={y} x2={PL} y2={y} stroke="#999" strokeWidth="1" />
+            <text x={PL - 8} y={y + 3} textAnchor="end" fill="#aaa">{v.toFixed(2)}</text>
           </g>
         )
       })}
