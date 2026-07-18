@@ -175,7 +175,7 @@ function App() {
                 <input
                   id={key}
                   type="text"
-                  inputMode="decimal"
+
                   value={inputs[key]}
                   onChange={handleChange(key)}
                   placeholder={placeholder}
