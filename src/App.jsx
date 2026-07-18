@@ -106,11 +106,10 @@ function LoadLine({ Vcc, Vce, Ic, Icsat }) {
       <text x={xSat - 32} y={ySat + 2} textAnchor="end" fill="#333" fontSize="9">
         {fmtMa(Icsat)}
       </text>
-      <text x={xSat + 6} y={ySat + 16} fill="#c62828" fontSize="10" fontWeight="bold">Ponto de Saturação</text>
+      <text x={xSat + 20} y={ySat + 5} fill="#c62828" fontSize="10" fontWeight="bold">Ponto de Saturação</text>
 
       <circle cx={xCut} cy={yCut} r="3" fill="#e53935" />
-      <text x={xCut - 40} y={yCut + 14} textAnchor="end" fill="#e53935" fontSize="11" fontWeight="bold">Ponto de Corte</text>
-      <text x={xCut - 40} y={yCut + 26} textAnchor="end" fill="#333" fontSize="10">Vcc = {fmt(Vcc)}</text>
+      <text x={xCut + 40} y={yCut + 30} textAnchor="end" fill="#e53935" fontSize="11" fontWeight="bold">Ponto de Corte</text>
 
       <circle cx={qx} cy={qy} r="5" fill="#1565c0" stroke="#fff" strokeWidth="1.5" />
       <text x={qx + 8} y={qy - 6} fill="#1565c0" fontSize="13" fontWeight="bold">Q</text>
@@ -121,7 +120,7 @@ function LoadLine({ Vcc, Vce, Ic, Icsat }) {
       </text>
 
       <line x1={qx} y1={qy} x2={qx} y2={PT + PH} stroke="#1565c0" strokeWidth="1" strokeDasharray="4,3" />
-      <text x={qx} y={PT + PH + 40} textAnchor="middle" fill="#1565c0" fontSize="10">
+      <text x={qx} y={PT + PH + 30} textAnchor="middle" fill="#1565c0" fontSize="10">
         Vce = {fmt(Vce)}
       </text>
     </svg>
